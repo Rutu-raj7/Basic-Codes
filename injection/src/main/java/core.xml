@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="my" class="injection.Car">
+		<property name="id" value="1"></property>
+		<property name="name" value="tata"></property>
+		<property name="engine" ref="myengine"></property>
+	</bean>
+
+	<bean name="myengine" class="injection.Engine">
+		<property name="cc" value="1.2"></property>
+		<property name="name" value="4stroke"></property>
+		<property name="engine" ref="myengine"></property>
+	</bean>
+
+	<bean id="mymobile" class="injection.Mobile ">
+		<property name="id" value="1"></property>
+		<property name="name" value="nokia"></property>
+		<property name="b" ref="mybattery"></property>
+
+	</bean>
+	<bean id="mybattery" class="injection.Battery">
+		<property name="name" value="6cell"></property>
+		<property name="brand" value="excide"></property>
+	</bean>
+
+	<bean id="mybag" class="injection.Bag">
+		<property name="name" value="school Bag"></property>
+		<property name="brand" value="aritocart"></property>
+		<property name="b" ref="mybook"></property>
+	</bean>
+	
+	  <bean id="mybook" class="injection.Book">
+	<property name="name" value="chhava"> </property>
+	<property name="writer" value="shivaji savant"></property>
+	</bean>
+
+
+
+</beans>
