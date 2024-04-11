@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+</style>
+
+<body>
+<form action="editpatient" method="post">
+<div class="container">
+        <label for="title">Title:</label>
+        <select id="title" name="title">
+            <option value="Mr">Mr</option>
+            <option value="Ms">Ms</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Dr">Dr</option>
+        </select>
+         <label for="idpurpose">Enter ID:</label>
+        <input type="text" id="idpurpose" name="id" required>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="firstname" required>
+        <label for="middle-name">Middle Name:</label>
+        <input type="text" id="middle-name" name="middlename">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="lastname" required>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        <label for="phone-number">Phone Number:</label>
+        <input type="text" id="phone-number" name="phonenumber" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+        <label for="children">Number of Children:</label>
+        <input type="text" id="children" name="children">
+        <label for="priority">Priority:</label>
+        <input type="text" id="priority" name="priority">
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+
+</form>
+
+</body>
+</html>
